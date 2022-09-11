@@ -42,7 +42,7 @@ public class Main {
                             if (!hasErrors)
                                 System.out.println("Сверка отчётов прошла успешно, несоответствий не выявлено.");
                             System.out.println("");
-                        }
+                        } else System.out.println("Годовой и/или месячные отчёты не загружены! Необходимо сначала загрузить отчёты. \n");
                         break;
                     //Вывести информацию о всех месячных отчётах
                     case 4:
@@ -52,13 +52,13 @@ public class Main {
                                 monthlyReports.get(i).printMonthInfo();
                             }
                             System.out.println("");
-                        }
+                        } else System.out.println("Месячные отчеты не загружены! Необходимо сначала загрузить отчёты. \n");
                         break;
                     //Вывести информацию о годовом отчёте
                     case 5:
                         if (yearlyReport != null) {
                             yearlyReport.printYearInfo();
-                        }
+                        } else System.out.println("Годовой отчёт не загружен! Необходимо сначала загрузить отчёт. \n");
                         break;
                     //Выйти из приложения
                     case 6:
